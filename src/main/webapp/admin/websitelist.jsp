@@ -60,15 +60,16 @@
 <!-- inline scripts related to this page -->
 <script src="<%=basePath%>assets/js/ace-extra.min.js"></script>
 <script type="text/javascript">
-	function sectionFormatter(sectionName) {
-		return '<a href="#"><b>' + sectionName + '</b></a>';
+	function sectionFormatter(value, row, index) {
+	//row.websiteId
+		return '<a href="#"><b>' + value + '</b></a>';
 	}
-	function taskFormatter(istask) {
+	function taskFormatter(value) {
 		return '<font class="label label-success arrowed-right">采集中</font>';
 	}
 
-	function optFormatter(websiteid) {
-		return '<div class="visible-md visible-lg hidden-sm hidden-xs btn-group"><button class="btn btn-xs btn-success"><i class="icon-ok bigger-120"></i></button><button class="btn btn-xs btn-info"><i class="icon-edit bigger-120"></i></button><button class="btn btn-xs btn-danger"><i class="icon-trash bigger-120"></i></button><button class="btn btn-xs btn-warning"><i class="icon-flag bigger-120"></i></button></div>'
+	function optFormatter(value) {
+		return '<div class="visible-md visible-lg hidden-sm hidden-xs btn-group"><button class="btn btn-xs btn-success"><i class="icon-ok bigger-120"></i></button><button class="btn btn-xs btn-info"><i class="icon-edit bigger-120"></i></button><button class="btn btn-xs btn-danger"><i class="icon-trash bigger-120"></i></button><button class="btn btn-xs btn-warning"><i class="icon-flag bigger-120"></i></button></div>';
 	}
 
 	function dateFormatter(paramDateType) {
@@ -155,8 +156,7 @@
 					</script>
 
 					<ul class="breadcrumb">
-						<li><i class="icon-home home-icon"></i> <a href="#">首页</a>
-						</li>
+						<li><i class="icon-home home-icon"></i> <a href="#">首页</a></li>
 						<li class="active" id="home_title">数据供应</li>
 						<li class="active" id="home_name">源数据市场</li>
 					</ul>
