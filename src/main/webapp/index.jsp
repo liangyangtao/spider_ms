@@ -13,13 +13,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="<%=basePath%>">
 <link rel="shortcut icon" href="favicon.ico" />
-<title>Bootstrap 模板</title>
+<title>源数据</title>
 <!-- 引入 Bootstrap -->
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="<%=basePath%>/assets/js/jquery-2.0.3.min.js"></script>
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<script
-	src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="<%=basePath%>/assets/js/bootstrap.min.js"></script>
 <!-- js  -->
 <script type="text/javascript" src="<%=basePath%>/js/common.js"></script>
 
@@ -74,11 +73,7 @@
 					<div class="ds-caption">电话咨询：</div>
 					<div class="ds-service">400-035-0510</div>
 					<div class="ds-caption">在线客服：</div>
-					&nbsp;&nbsp;<a target="_blank" href="javascript:;"
-						onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=849402826&site=qq&menu=yes&ref='+document.location,'_blank','height=544,width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"><img
-						style="vertical-align:top;" border="0"
-						src="http://www.finndy.com/images/qqservice.png" width="90"
-						height="24" alt="点击联系发源地客服" title="点击联系发源地客服" /> </a>
+					&nbsp;&nbsp;<a target="_blank" href="#"> </a>
 
 				</div>
 			</div>
@@ -140,44 +135,6 @@
 						<p>内置多重数据过滤模块及SQL/XSS过滤方案</p>
 					</div>
 				</div>
-
-				<!--
-<div class="col-4">
-<div class="col-box vspliter">
-<div class="fimg aicon weiqd"></div>
-<h3>数据二维码</h3>
-<p>支持二维码查看数据内容，发挥您的想象空间</p>
-</div>
-</div>
-<div class="col-4">
-<div class="col-box vspliter">
-<div class="fimg aicon wpay"></div>
-<h3>在线支付</h3>
-<p>支持在线支付及管理功能，方便快速实现现金流</p>
-</div>
-</div>
-<div class="col-4">
-<div class="col-box vspliter">
-<div class="fimg aicon app"></div>
-<h3>移动客户端</h3>
-<p>支持iOS/Android客户端，轻松打通移动互联网</p>
-</div>
-</div>
-<div class="col-4">
-<div class="col-box vspliter">
-<div class="fimg aicon community"></div>
-<h3>用户系统</h3>
-<p>内置完善的用户/会员管理系统，轻松管理用户</p>
-</div>
-</div>
-<div class="col-4">
-<div class="col-box">
-<div class="fimg aicon activities"></div>
-<h3>精准应用案例</h3>
-<p>两大类10多个实际案例，助您快速打造产品</p>
-</div>
-</div>-->
-
 			</div>
 
 			<div id="pushCategory" class="clearfix">
@@ -187,8 +144,7 @@
 						<p>平台已入驻几万企业及个人用户。每天使用发源地挖掘海量数据。您可以发现或使用其他用户定制的源。</p>
 					</div>
 					<div class="center-btn">
-						<a class="data-btn" href="http://www.finndy.com/?action-robot"
-							title="">发现/使用源<b></b> </a>
+						<a class="data-btn" href="#" title="">发现/使用源<b></b> </a>
 					</div>
 				</div>
 				<div id="datapush" class="rounded3">
@@ -197,8 +153,7 @@
 						<p>发源地提供基于云端的强大的数据采集、存储及数据API功能，您可以根据需求定制属于您的特色源。</p>
 					</div>
 					<div class="center-btn">
-						<a class="cont-btn" href="http://www.finndy.com/?action-custom"
-							title="">定制/创建源<b></b> </a>
+						<a class="cont-btn" href="#" title="">定制/创建源<b></b> </a>
 					</div>
 				</div>
 			</div>

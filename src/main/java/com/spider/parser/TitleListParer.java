@@ -29,10 +29,46 @@ public class TitleListParer {
 			StringBuffer cssPath = new StringBuffer();
 			linkCssPath = JsoupElementTools.checkPathNoIndex(document, element,
 					cssPath).toString();
+
 			if (linkCssPath.contains("a")) {
+
+				if (linkCssPath.contains("body")) {
+
+				} else {
+
+					Elements elements = document.select(linkCssPath);
+					if (elements.size() <= 3) {
+						// 表明csspth 范围过小
+						String topCss = linkCssPath.split(">")[0];
+						elements = document.select(topCss);
+
+						for (Element element2 : elements) {
+
+							element = element2.parent();
+							break;
+						}
+
+						cssPath.insert(0, ">");
+
+						linkCssPath = JsoupElementTools.checkPathNoIndex(
+								document, element, cssPath).toString();
+						if (topCss.contains(".") || topCss.contains("#")) {
+							if (topCss.contains(".")) {
+								linkCssPath =	linkCssPath.replace(topCss,
+										topCss.split(".")[0]);
+							} else if (topCss.contains("#")) {
+								linkCssPath =	linkCssPath.replace(topCss,
+										topCss.split("#")[0]);
+							}
+						}
+
+						continue;
+					}
+				}
 				break;
 			}
 		}
+		System.out.println( "TitleListPaser " + linkCssPath);
 		Elements elements = document.select(linkCssPath);
 		return elements;
 	}

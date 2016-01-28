@@ -13,7 +13,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <base href="<%=basePath%>">
 <link rel="shortcut icon" href="favicon.ico" />
-<title>Bootstrap 模板</title>
+<title>源数据</title>
 <!-- 引入 Bootstrap -->
 <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -109,8 +109,7 @@
 							<p>
 								<span class="price">免 费</span>
 							</p>
-							<a href="http://www.finndy.com/?action-customin"
-								class="pricebtn rounded3 bg_color_green">开始定制</a>
+							<a href="#" class="pricebtn rounded3 bg_color_green">开始定制</a>
 						</div>
 					</div>
 					<div class="colbox colfix1 rounded5">
@@ -125,8 +124,7 @@
 							<p>
 								<span class="price">面 议</span>
 							</p>
-							<a target="_blank" href="javascript:;"
-								onclick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=849402826&site=qq&menu=yes&ref='+document.location,'_blank','height=544,width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"
+							<a target="_blank" href="#"
 								class="pricebtn rounded3 bg_color_blue">联系客服</a>
 						</div>
 					</div>
@@ -142,7 +140,7 @@
 							<p>
 								<span class="price">待 定</span>
 							</p>
-							<a href="javascript:;" class="pricebtn rounded3 bg_color_gray"
+							<a href="#" class="pricebtn rounded3 bg_color_gray"
 								style="cursor: default;">即将开放</a>
 						</div>
 					</div>

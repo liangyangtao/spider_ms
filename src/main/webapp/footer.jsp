@@ -11,13 +11,13 @@
 			<dl>
 				<dt>关于我们</dt>
 				<dd>
-					<a href="<%=basePath%>index.jsp" target="_blank">关于发源地</a>
+					<a href="<%=basePath%>index.jsp" target="_blank">关于源数据</a>
 				</dd>
 				<dd>
 					<a href="<%=basePath%>index.jsp">商务渠道合作</a>
 				</dd>
 				<dd>
-					<a href="<%=basePath%>index.jsp">发源地网站首页</a>
+					<a href="<%=basePath%>index.jsp">源数据网站首页</a>
 				</dd>
 			</dl>
 			<dl>
@@ -26,7 +26,7 @@
 					<a href="<%=basePath%>index.jsp" target="_blank">帮助中心</a>
 				</dd>
 				<dd>
-					<a href="<%=basePath%>index.jsp">关于发源地源宝</a>
+					<a href="<%=basePath%>index.jsp">关于源数据</a>
 				</dd>
 			</dl>
 			<dl>
@@ -50,7 +50,7 @@
 					<b>沪ICP备09073967号</b>
 				</dd>
 			</dl>
-			<div class="copyright">2015 版权所有 ©发源地</div>
+			<div class="copyright">2015 版权所有 ©源数据</div>
 		</div>
 	</div>
 

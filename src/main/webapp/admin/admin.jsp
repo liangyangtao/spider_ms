@@ -53,7 +53,7 @@
 
 <!-- inline scripts related to this page -->
 <script src="<%=basePath%>assets/js/ace-extra.min.js"></script>
-
+<script src="<%=basePath%>layer/layer.js"></script>
 
 
 </head>
@@ -86,7 +86,8 @@
 					</script>
 
 					<ul class="breadcrumb">
-						<li><i class="icon-home home-icon"></i> <a href="#">首页</a></li>
+						<li><i class="icon-home home-icon"></i> <a href="#">首页</a>
+						</li>
 						<li class="active" id="home_title"></li>
 						<li class="active" id="home_name">采集控制中心</li>
 					</ul>
@@ -96,8 +97,7 @@
 					<!-- #nav-search -->
 				</div>
 
-				<div class="page-content" id="tab_show">
-				</div>
+				<div class="page-content" id="tab_show"></div>
 				<!-- /.page-content -->
 			</div>
 			<!-- /.main-content -->

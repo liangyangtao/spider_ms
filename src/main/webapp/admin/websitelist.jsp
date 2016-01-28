@@ -103,6 +103,25 @@
 		}
 
 	}
+	function getwebList() {
+		var webName = $("#webName").val();
+		var sectionName = $("#sectionName").val();
+		$("#websiteTable").bootstrapTable(
+				'refresh',
+				{
+					url : './../showWebsite.action?webName=' + webName
+							+ '&sectionName=' + sectionName
+				});
+	}
+	$(function($) {
+		$("#webName").change(function() {
+			getwebList();
+		});
+		$("#sectionName").change(function() {
+			getwebList();
+		});
+
+	});
 </script>
 
 
@@ -136,13 +155,14 @@
 					</script>
 
 					<ul class="breadcrumb">
-						<li><i class="icon-home home-icon"></i> <a href="#">首页</a></li>
+						<li><i class="icon-home home-icon"></i> <a href="#">首页</a>
+						</li>
 						<li class="active" id="home_title">数据供应</li>
 						<li class="active" id="home_name">源数据市场</li>
 					</ul>
 					<!-- .breadcrumb -->
 
-					<jsp:include page="search.jsp" flush="true"></jsp:include>
+
 					<!-- #nav-search -->
 				</div>
 
@@ -161,9 +181,12 @@
 					<!-- /.page-header -->
 					<!-- showWebsite.action -->
 					<h4 class="pink">
-						<i class="icon-hand-right icon-animated-hand-pointer blue"></i> <a
-							href="#modal-table" role="button" class="green"
-							data-toggle="modal"> 占位 </a>
+						<i class="icon-hand-right icon-animated-hand-pointer blue"></i> <span
+							class="input-icon">网站名称:<input type="text"
+							placeholder="网站名称 " class="nav-search-input" id="webName"
+							autocomplete="off" /> </span> <span class="input-icon">板块名称: <input
+							type="text" placeholder="板块名称 " class="nav-search-input"
+							id="sectionName" autocomplete="off" name="" /> </span>
 					</h4>
 					<div class="hr hr-18 dotted hr-double"></div>
 					<div class="row">
@@ -180,7 +203,8 @@
 										</table> -->
 										<table data-toggle="table" data-url="./../showWebsite.action"
 											data-data-type="json" data-pagination="true"
-											data-side-pagination="server" data-page-list="[10]">
+											data-side-pagination="server" data-page-list="[10]"
+											id="websiteTable">
 											<thead>
 												<tr>
 													<th data-field="webName">网站名称</th>

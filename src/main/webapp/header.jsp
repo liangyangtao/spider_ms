@@ -10,29 +10,28 @@
 	<p class="cate_nav_mask" style="height: 55px;"></p>
 	<div class="headercenter clearfix">
 		<div id="menulogo">
-			<a href="#"><img src="<%=basePath%>/images/logo.png" alt="发源地">
-			</a>
+			<a href="#"> </a>
 
 		</div>
 		<ul class="nav">
-			<li class=""><a href="<%=basePath%>index.jsp">首页</a></li>
-			<li class=""><span class="menuline"></span></li>
-			<li class=""><a href="<%=basePath%>index.jsp">交易市场</a>
+			<li class=""><a href="<%=basePath%>index.jsp">首页</a>
 			</li>
-			<li class=""><span class="menuline"></span></li>
-			<li class=""><a href="<%=basePath%>custom.jsp">数据定制</a>
+			<li class=""><span class="menuline"></span>
 			</li>
-			<li class=""><span class="menuline"></span></li>
-			<li class=""><a href="<%=basePath%>index.jsp">关于我们</a></li>
+			<li class=""><a href="<%=basePath%>index.jsp">交易市场</a></li>
+			<li class=""><span class="menuline"></span>
+			</li>
+			<li class=""><a href="<%=basePath%>custom.jsp">数据定制</a></li>
+			<li class=""><span class="menuline"></span>
+			</li>
+			<li class=""><a href="<%=basePath%>index.jsp">关于我们</a>
+			</li>
 		</ul>
 		<ul class="usernav">
-			<li class="login reg"><a
-				href="<%=basePath%>index.jsp">注册</a>
-			</li>
+			<li class="login reg"><a href="<%=basePath%>index.jsp">注册</a></li>
 			<li class="login-link"><a class="rounded3"
-				href="<%=basePath%>index.jsp"><i
-					class="faicon fa fa-user"></i> 登录</a>
-			</li>
+				href="<%=basePath%>index.jsp"><i class="faicon fa fa-user"></i>
+					登录</a></li>
 		</ul>
 		<!-- <div id="menunav">
 				<span id="muser"> <a href="#" class="un">yangtao</a>

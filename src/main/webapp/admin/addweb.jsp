@@ -51,14 +51,13 @@
 
 <!-- inline scripts related to this page -->
 <script src="<%=basePath%>assets/js/ace-extra.min.js"></script>
-
+<script src="<%=basePath%>layer/layer.js"></script>
 
 
 <script type="text/javascript">
 	function fillContent() {
 		var webModel = $("input[name='webModel']:checked").val();
 		var checkUrl = $("#url_select option:selected").val();
-
 		var checkTitleCssPath = $("#url_select option:selected").text();
 		var checkTimeCssPath = $("#checkTimeCssPath").val();
 		var checkTextCssPath = $("#checkTextCssPath").val();
@@ -98,9 +97,9 @@
 		urlListMap = eval("(" + urlListMap + ")");
 		var urlList = urlListMap.urlList;
 		if (urlList.length == 0) {
-			alert("该网站不支持");
+			layer.alert("该网站不支持");
+			return false;
 		}
-
 		var ullist = '';
 		var selectList = '';
 		for ( var i = 0; i < urlList.length; i++) {
@@ -129,8 +128,8 @@
 			if (info.step == 1) {
 				var fdStart = strCode.indexOf("http");
 				if (fdStart == -1) {
-					/* 	alert("请重新输入正确的网址！！"); */
-					/* return false; */
+					layer.alert("请重新输入正确的网址！！");
+					return false;
 				} else {
 					var html = $.ajax({
 						type : "POST",
@@ -139,20 +138,19 @@
 						async : false
 					}).responseText;
 					if (html.indexOf("true") > -1) {
-						/* alert("有人已经帮你录入了，可以在你的标记中查看"); */
-						/* return false; */
+						layer.alert("有人已经帮你录入了，可以在你的标记中查看");
+						return false;
+					} else {
+						fillurlcheckList();
 					}
-					/*  else { */
-					fillurlcheckList();
-					/* } */
 				}
 
 			} else if (info.step == 2) {
 
 				fillContent();
-				/* return false; */
+				return false;
 			} else if (info.step == 3) {
-				/* return false; */
+				return false;
 			}
 
 			if (info.step == 1 && $validation) {
@@ -214,13 +212,14 @@
 					</script>
 
 					<ul class="breadcrumb">
-						<li><i class="icon-home home-icon"></i> <a href="#">首页</a></li>
+						<li><i class="icon-home home-icon"></i> <a href="#">首页</a>
+						</li>
 						<li class="active" id="home_title">数据供应</li>
 						<li class="active" id="home_name">创建数据源</li>
 					</ul>
 					<!-- .breadcrumb -->
 
-					<jsp:include page="search.jsp" flush="true"></jsp:include>
+					<%-- <jsp:include page="search.jsp" flush="true"></jsp:include> --%>
 					<!-- #nav-search -->
 				</div>
 
@@ -246,13 +245,16 @@
 														</li>
 
 														<li data-target="#step2"><span class="step">2</span>
-															<span class="title">获取新闻列表页</span></li>
+															<span class="title">获取新闻列表页</span>
+														</li>
 
 														<li data-target="#step3"><span class="step">3</span>
-															<span class="title">获取新闻属性</span></li>
+															<span class="title">获取新闻属性</span>
+														</li>
 
 														<li data-target="#step4"><span class="step">4</span>
-															<span class="title">填入数据来源</span></li>
+															<span class="title">填入数据来源</span>
+														</li>
 													</ul>
 												</div>
 

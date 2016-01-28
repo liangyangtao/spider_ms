@@ -11,7 +11,8 @@ public class SearchEntity {
 	private String checkTitleCssPath;
 	private String checkTimeCssPath;
 	private String checkTextCssPath;
-	
+	private String webName;
+	private String sectionName;
 
 	public Integer getWebsiteId() {
 		return websiteId;
@@ -83,6 +84,22 @@ public class SearchEntity {
 
 	public void setCheckTextCssPath(String checkTextCssPath) {
 		this.checkTextCssPath = checkTextCssPath;
+	}
+
+	public String getWebName() {
+		return webName;
+	}
+
+	public void setWebName(String webName) {
+		this.webName = webName;
+	}
+
+	public String getSectionName() {
+		return sectionName;
+	}
+
+	public void setSectionName(String sectionName) {
+		this.sectionName = sectionName;
 	}
 
 }
